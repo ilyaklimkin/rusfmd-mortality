@@ -285,7 +285,7 @@ ui <- fluidPage(
         source being utilized
         <a href=\"http://demogr.nes.ru/en/demogr_indicat/data_description\">here</a>,
         while the calculations and the application source code are available
-        <a href=\"https://github.com/ilyaklimkin\">here</a>.</font><br>
+        <a href=\"github.com/ilyaklimkin/rusfmd-mortality\">here</a>.</font><br>
         <font size = \"2\"><i>All the calculations are performed on
         age-specific mortality rates (ASMR) by five-year age groups up to age
         85+. In rare cases ASMRs were forecasted, e.g. for some small
