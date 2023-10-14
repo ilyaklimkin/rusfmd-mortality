@@ -1,8 +1,8 @@
 # rusfmd-mortality
 An application that allows you to explore mortality patterns in Russian regions. For the calculations I used data from the Russian Fertility and Mortality database[1]. To run the app execute the R code below on your machine.
 ``` r
-# install shiny (if neccessary)
-install.packages("shiny")
+# install packages (if neccessary)
+install.packages(c("shiny","readr","readxl","dplyr","tidyr","ggplot2","thematic","bslib","scales"))
 
 # load shiny
 library(shiny)
