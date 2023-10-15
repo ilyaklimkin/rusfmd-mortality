@@ -175,16 +175,12 @@ lt_for_render <- function(df) {
 lt_plot <- function(df1, df2, metric) {
   
   if (metric == "mx") {
-    value <- "mx"
     title_string <- "Age-specific death rate between ages x and x + n (mx)"
   } else if (metric == "qx") {
-    value <- "qx"
     title_string <- "Probability of dying between ages x and x + n (qx)"
   } else if (metric == "lx") {
-    value <- "lx"
     title_string <- "Number of people left alive at age x (lx)"
   } else {
-    value <- "dx"
     title_string <- "Number of people dying between ages x and x + n (dx)"
   }
   
@@ -198,7 +194,7 @@ lt_plot <- function(df1, df2, metric) {
           TRUE ~ x + 2.5
         )
       } else x
-      , val = get(value), metric = value
+      , val = get(metric)
     ) %>%
     ggplot(aes(x = x, y = val, color = pop)) +
     geom_line(linewidth = 1) +
