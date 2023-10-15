@@ -68,16 +68,14 @@ sdr_le_plot <- function(df, metric) {
   
   if (metric == "sdr") {
     age_choices <- sdr_age_choices
-    value <- "sdr"
     title_string <- "Age-standardized death rates (SDR) per 1,000 person-years"
   } else {
     age_choices <- le_age_choices
-    value <- "le"
     title_string <- "Life expectancy (LE) in years"
   }
   
   df %>%
-    ggplot(aes(year, get(value), color = reg_sk)) +
+    ggplot(aes(year, get(metric), color = reg_sk)) +
     geom_line(linewidth = 1, alpha = 0.75) +
     geom_point(size = 1.25, alpha = 0.75) +
     facet_grid(
