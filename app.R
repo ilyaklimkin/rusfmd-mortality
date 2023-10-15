@@ -15,14 +15,8 @@ library(scales)
 # table for SDR & LE
 sdr_le_table <- function(df, input_points, metric) {
   
-  if (metric == "sdr") {
-    value <- "sdr"
-  } else {
-    value <- "le"
-  }
-  
-  brushedPoints(df, input_points, xvar = "year", yvar = value) %>%
-    mutate(val = value) %>%
+  brushedPoints(df, input_points, xvar = "year", yvar = metric) %>%
+    mutate(val = metric) %>%
     arrange(reg_sk, desc(year)) %>%
     transmute(
       Sex = case_when(
@@ -43,7 +37,7 @@ sdr_le_table <- function(df, input_points, metric) {
       ),
       Region = reg_sk,
       Year = as.integer(year),
-      Value = get(value)
+      Value = get(metric)
     )
   
 }
