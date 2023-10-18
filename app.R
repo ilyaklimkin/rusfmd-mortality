@@ -413,7 +413,7 @@ ui <- fluidPage(
         column(
           HTML(
             "<center><font size = \"3\">In this tab, you'll find data on
-            life table (LE) functions for two chosen populations. Select
+            life table (LT) functions for two chosen populations. Select
             the populations to be compared by configuring the Region-Year-Sex
             combination right below.</font></center>"
           ),
