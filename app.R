@@ -415,7 +415,7 @@ ui <- fluidPage(
             "<center><font size = \"3\">In this tab, you'll find data on
             life table (LT) functions for two chosen populations. Select
             the populations to be compared by configuring the Region-Year-Sex
-            combination right below.</font></center>"
+            combination right below.</font></center><br>"
           ),
           offset = 1,
           width = 10
